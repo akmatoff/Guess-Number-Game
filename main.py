@@ -8,7 +8,7 @@ reset = attr('reset')
 
 attempt = 1
 score = 0
-scores = []
+scores = [] 
 
 while attempt <= 5:
   randomnum = randint(1, 6)
@@ -16,8 +16,8 @@ while attempt <= 5:
   difference = abs(usernum - randomnum)
   attempt += 1
 
-  print("The difference between your and computer's number is", green, difference, reset, "\n")
-  print("Computer's num is", yellow, randomnum, reset, "\n")
+  print("The difference between your and computer's number is", green + str(difference) + reset, "\n")
+  print("Computer's num is", yellow + str(randomnum) + reset, "\n")
 
   if difference == 0:
     score = 6
@@ -42,8 +42,8 @@ while attempt <= 5:
 
   totalscore = sum(scores)
 
-  print("You got", yellow, score, reset, "points\n")
-print("Your total score is", yellow, totalscore, reset, "\n")
+  print("You got", yellow + str(score) + reset, "points\n")
+print("Your total score is", yellow + str(totalscore) + reset, "\n")
 
 if totalscore < 25:
   print(red + "YOU LOSE!" + reset, "\n")
